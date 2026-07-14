@@ -602,8 +602,12 @@ p, a, span, li, th, td, input {
         margin: auto;
         background-color: #d5af90;
     }
-    .table-info .table-column .item > span,
-    .table-info .table-column .item > .item-checkbox {
+    .table-info .table-column .item {
+        -webkit-box-pack: start;
+        -ms-flex-pack: start;
+        justify-content: flex-start;
+    }
+    .table-info .table-column .item > span, .table-info .table-column .item > .item-checkbox {
         width: 50%;
         display: -webkit-box;
         display: -ms-flexbox;
@@ -611,6 +615,11 @@ p, a, span, li, th, td, input {
         -webkit-box-pack: center;
         -ms-flex-pack: center;
         justify-content: center;
+    }
+    .table-info .table-column .item > .item-checkbox {
+        width: 25px;
+        margin-left: auto;
+        margin-right: auto;
     }
     .table-info .table-column-data .check-box {
         left: 50%;

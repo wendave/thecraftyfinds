@@ -92,25 +92,6 @@ $(function () {
     }
     inputDP();
 
-    
-    // function clearInputs() {
-    //     $(".clear").on("click", function (e) {
-    //         e.preventDefault();
-    
-    //         // Uncheck all items
-    //         $(".item-checkbox").prop("checked", false);
-    
-    //         // Reset quantities
-    //         $(".group-qty").val(0);
-    
-    //         // Reset deposit
-    //         $("#total_deposit").val("0.00");
-    
-    //         // Recompute totals
-    //         computeEverything();
-    //     });
-    // }
-    // clearInputs();
 
     function preventPageRefresh() {
         function beforeUnloadHandler(e) {
@@ -121,7 +102,7 @@ $(function () {
         window.addEventListener("beforeunload", beforeUnloadHandler);
         return beforeUnloadHandler;
     }
-    // const beforeUnloadHandler = preventPageRefresh();
+    const beforeUnloadHandler = preventPageRefresh();
 
 
     function clearInputs() {
