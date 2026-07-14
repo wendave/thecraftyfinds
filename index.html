@@ -13,6 +13,37 @@
     <title>The Crafty Finds</title>
     <link rel="icon" href="assets/images/logo.png">
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <style>
+        :root {
+            --item-heading: "ITEMS";
+            --heading-1: "Principal Sponsor";
+            --heading-2: "Groomsmen";
+            --heading-3: "Bridesmaid";
+            --quantity: "Quantity";
+        }
+        .table-column-principal .items::before {
+            content: var(--heading-1);
+        }
+        .table-column-groomsmen .items::before {
+            content: var(--heading-2);
+        }
+        .table-column-bridesmaid .items::before {
+            content: var(--heading-3);
+        }
+        @media screen and (max-width: 991px) {
+            .table-column-data .items::after {
+                content: var(--item-heading);
+            }
+        }
+        @media (min-width: 992px) {
+            .table-column-placeholder .item:nth-child(1)::before {
+                content: var(--item-heading);
+            }
+            .table-column-data .quantity::before {
+                content: var(--quantity);
+            }
+        }
+    </style>
 </head>
 <body>
     <header class="section-logo">

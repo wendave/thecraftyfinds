@@ -1,10 +1,23 @@
+:root {
+    --primary-color: #d5af90;
+    --secondary-color: #b99476;
+    --principal-color: #fff2cc;
+    --bridesmaid-color: #ead1dc;
+    --groomsmen-color: #cfe2f3;
+    --text-color: #101010;
+    --clear-color: #e23439;
+    --white-color: #fff;
+    --black-color: #000;
+    --light-gray-color: #ddd;
+    --brown-color: #8d6d54;
+}
 html,body {
     margin: 0;
     padding: 0;
 }
 body {
     position: relative;
-    background-color: #d5af90;
+    background-color: var(--primary-color);
 }
 p {
     margin: 0;
@@ -39,28 +52,28 @@ p {
     letter-spacing: 1px;
     font-style: italic;
     font-weight: 500;
-    color: #101010;
+    color: var(--text-color);
 }
 .input::-moz-placeholder {
     font-size: 16px;
     letter-spacing: 1px;
     font-style: italic;
     font-weight: 500;
-    color: #101010;
+    color: var(--text-color);
 }
 .input:-ms-input-placeholder {
     font-size: 16px;
     letter-spacing: 1px;
     font-style: italic;
     font-weight: 500;
-    color: #101010;
+    color: var(--text-color);
 }
 .input:-moz-placeholder {
     font-size: 16px;
     letter-spacing: 1px;
     font-style: italic;
     font-weight: 500;
-    color: #101010;
+    color: var(--text-color);
 }
 .form-group {
     display: -webkit-box;
@@ -69,6 +82,7 @@ p {
 }
 p, a, span, li, th, td, input {
     font-size: 16px;
+    color: var(--text-color);
 }
 
 .section-logo {
@@ -111,7 +125,7 @@ p, a, span, li, th, td, input {
 .client-info .form-group .input {
     letter-spacing: 2px;
     background: transparent;
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid var(--black-color);
 }
 .client-info .form-group:nth-child(odd) {
     margin-right: auto;
@@ -203,14 +217,14 @@ p, a, span, li, th, td, input {
     -ms-flex-pack: center;
     justify-content: center;
     height: 40px;
+    padding: 0 10px;
 }
 .table-info .table-column .item:nth-child(odd) {
     background-color: transparent;
 }
 .table-info .table-column .item:nth-child(even) {
-    background-color: #b99476;
+    background-color: var(--secondary-color);
 }
-
 .table-info .table-column-data .check-box {
     position: absolute;
     top: 0;
@@ -220,15 +234,15 @@ p, a, span, li, th, td, input {
     height: 25px;
     width: 25px;
     margin: auto;
-    background-color: #fff;
+    background-color: var(--white-color);
     -webkit-transition: ease-in-out .2s all;
     transition: ease-in-out .2s all;
 }
 .table-info .table-column-data input:hover ~ .check-box {
-    background-color: #ddd;
+    background-color: var(--light-gray-color);
 }
 .table-info .table-column-data .item input:checked ~ .check-box {
-    background-color: #8d6d54;
+    background-color: var(--brown-color);
 }
 .table-info .table-column-data .check-box:after {
     content: "";
@@ -245,7 +259,7 @@ p, a, span, li, th, td, input {
     left: 8px;
     width: 5px;
     height: 10px;
-    border: solid #fff;
+    border: solid var(--white-color);
     border-width: 0 3px 3px 0;
     -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
@@ -269,16 +283,6 @@ p, a, span, li, th, td, input {
     field-sizing: content;
     background: transparent;
     border: none;
-}
-
-.table-column-principal .items::before {
-    content: "Principal Sponsor";
-}
-.table-column-groomsmen .items::before {
-    content: "Groomsmen";
-}
-.table-column-bridesmaid .items::before {
-    content: "Bridesmaid";
 }
 
 .totals {
@@ -306,6 +310,7 @@ p, a, span, li, th, td, input {
     -ms-flex-align: center;
     align-items: center;
     height: 40px;
+    padding: 0 10px;
 }
 .totals .display-group .text {
     width: 65%;
@@ -314,19 +319,19 @@ p, a, span, li, th, td, input {
     width: 35%;
 }
 .totals .display-group:nth-child(1) {
-    background-color: #fff2cc;
+    background-color: var(--principal-color);
 }
 .totals .display-group:nth-child(2) {
-    background-color: #ead1dc;
+    background-color: var(--bridesmaid-color);
 }
 .totals .display-group:nth-child(3) {
-    background-color: #cfe2f3;
+    background-color: var(--groomsmen-color);
 }
 .totals .display-group:nth-child(4) {
-    background-color: #b99476;
+    background-color: var(--secondary-color);
 }
 .totals .display-group .text {
-    border-right: 1px solid #d5af90;
+    border-right: 1px solid var(--primary-color);
 }
 .totals .display-group #total_deposit {
     width: auto;
@@ -381,8 +386,8 @@ p, a, span, li, th, td, input {
     outline: none;
 }
 .actions .wrapper .clear {
-    color: #fff;
-    background-color: #e23439;
+    color: var(--white-color);
+    background-color: var(--clear-color);
 }
 
 .section-footer {
@@ -415,13 +420,13 @@ p, a, span, li, th, td, input {
     width: 2px;
     height: 120%;
     margin: auto;
-    background-color: #101010;
+    background-color: var(--text-color);
 }
 .section-footer li + li {
     margin-left: 30px;
 }
 .section-footer li a {
-    color: #000;
+    color: var(--black-color);
     text-decoration: none;
 }
 
@@ -512,11 +517,11 @@ p, a, span, li, th, td, input {
         width: calc(50% - 1px);
         height: 40px;
         margin-left: auto;
-        background-color: #b99476;
-        border-left: 1px solid #d5af90;
+        padding: 0 10px;
+        background-color: var(--secondary-color);
+        border-left: 1px solid var(--primary-color);
     }
     .table-column-data .items::after {
-        content: "ITEMS";
         position: absolute;
         left: 0;
         bottom: 100%;
@@ -529,9 +534,10 @@ p, a, span, li, th, td, input {
         -webkit-box-align: center;
         -ms-flex-align: center;
         align-items: center;
-        width: 50%;
+        width: calc(50% - 1px);
         height: 40px;
-        background-color: #b99476;
+        background-color: var(--secondary-color);
+        border-right: 1px solid var(--primary-color);
     }
     .table-column-data .quantity {
         display: -webkit-box;
@@ -542,6 +548,22 @@ p, a, span, li, th, td, input {
         align-items: center;
         order: 2;
         height: 40px;
+    }
+    .table-column-data .quantity.mobile-odd {
+        background-color: var(--primary-color);
+    }
+    .table-column-data .quantity.mobile-even {
+        position: relative;
+        background-color: var(--secondary-color);
+    }
+    .table-column-data .quantity.mobile-even::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: calc(50% - 1px);
+        width: 1px;
+        height: 100%;
+        background-color: var(--primary-color);
     }
     .table-column-data .quantity > label {
         display: -webkit-box;
@@ -564,7 +586,6 @@ p, a, span, li, th, td, input {
         height: 25px;
         padding: 0 10px;
     }
-
     .table-column-data .summary {
         display: -webkit-box;
         display: -ms-flexbox;
@@ -586,10 +607,42 @@ p, a, span, li, th, td, input {
         width: 50%;
         height: 40px;
     }
-    .table-column-data .summary > *:nth-child(1), .table-column-data .summary > *:nth-child(2) {
-        background-color: #b99476;
+    .table-column-data .summary.mobile-start-odd {
+        position: relative;
     }
-
+    .table-column-data .summary.mobile-start-odd::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: calc(50% - 1px);
+        width: 1px;
+        height: 100%;
+        background-color: var(--primary-color);
+    }
+    .table-column-data .summary.mobile-start-odd > *:nth-child(1), 
+    .table-column-data .summary.mobile-start-odd > *:nth-child(2) {
+        background-color: var(--primary-color);
+    }
+    .table-column-data .summary.mobile-start-odd > *:nth-child(3), 
+    .table-column-data .summary.mobile-start-odd > *:nth-child(4) {
+        background-color: var(--secondary-color);
+    }
+    .table-column-data .summary.mobile-start-even {
+        position: relative;
+    }
+    .table-column-data .summary.mobile-start-even::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: 1px;
+        height: 100%;
+        background-color: var(--primary-color);
+    }
+    .table-column-data .summary.mobile-start-even > *:nth-child(1), 
+    .table-column-data .summary.mobile-start-even > *:nth-child(2) {
+        background-color: var(--secondary-color);
+    }
 
     .table-info .table-column .item::before {
         content: "";
@@ -600,7 +653,7 @@ p, a, span, li, th, td, input {
         width: 1px;
         height: 100%;
         margin: auto;
-        background-color: #d5af90;
+        background-color: var(--primary-color);
     }
     .table-info .table-column .item {
         -webkit-box-pack: start;
@@ -683,13 +736,16 @@ p, a, span, li, th, td, input {
         left: 100%;
         width: 100px;
         height: 100%;
-        background-color: #b99476;
+        background-color: var(--secondary-color);
     }
-    .table-info .table-column-placeholder .summary label:nth-child(even),
-    .table-info .table-column-data .summary .readonly:nth-child(4) {
-        background-color: #b99476;
+    .table-info .summary.desktop-start-odd label:nth-child(even),
+    .table-info .summary.desktop-start-odd .readonly:nth-child(4) {
+        background-color: var(--secondary-color);
     }
-
+    .table-info .summary.desktop-start-even label:nth-child(1),
+    .table-info .summary.desktop-start-even .readonly:nth-child(2) {
+        background-color: var(--secondary-color);
+    }
     .table-info input[type=number] {
         height: -webkit-fill-available;
         height: -moz-available;
@@ -708,7 +764,6 @@ p, a, span, li, th, td, input {
         width: 16%;
     }
     .table-column-placeholder .item:nth-child(1)::before {
-        content: "ITEMS";
         position: absolute;
         bottom: 100%;
         display: -webkit-box;
@@ -723,7 +778,7 @@ p, a, span, li, th, td, input {
         width: 100%;
         height: 40px;
         font-size: 16px;
-        background-color: #b99476;
+        background-color: var(--secondary-color);
     }
     .table-column-placeholder .summary {
         display: -webkit-box;
@@ -751,7 +806,7 @@ p, a, span, li, th, td, input {
         left: 0;
         width: 1px;
         height: 100%;
-        background-color: #d5af90;
+        background-color: var(--primary-color);
     }
     .table-column-data .quantity label, 
     .table-column-data .items span,
@@ -773,11 +828,12 @@ p, a, span, li, th, td, input {
         -webkit-box-align: center;
         -ms-flex-align: center;
         align-items: center;
-        width: calc(100% - 100px);
+        width: calc(100% - 120px);
         height: 40px;
+        padding: 0 10px;
         font-size: 16px;
-        background-color: #b99476;
-        border-left: 1px solid #d5af90;
+        background-color: var(--secondary-color);
+        border-left: 1px solid var(--primary-color);
     }
     .table-column-data .quantity {
         position: relative;
@@ -791,12 +847,11 @@ p, a, span, li, th, td, input {
         -webkit-box-pack: center;
         -ms-flex-pack: center;
         justify-content: center;
-        order: 2;
         width: 100px;
         padding: 8px 0;
+        order: 2;
     }
     .table-column-data .quantity::before {
-        content: "Quantity";
         position: absolute;
         bottom: 100%;
         display: -webkit-box;
@@ -811,16 +866,16 @@ p, a, span, li, th, td, input {
         width: 100px;
         height: 40px;
         font-size: 16px;
-        background-color: #b99476;
+        background-color: var(--secondary-color);
     }
     .table-column-data .summary {
-        order: 3;
         width: 100%;
+        order: 3;
     }
 }
 
 @media (min-width: 1200px) {
-    .table-column-data .items,
+    .table-column-data div.items,
     .table-column-data .items::before {
         width: calc(100% - 150px);
     }
