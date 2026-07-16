@@ -32,7 +32,8 @@ p {
 }
 .input {
     width: 100%;
-    padding: 10px;
+    /* padding: 10px; */
+    padding: 5px 10px;
     font-size: 16px;
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -118,12 +119,12 @@ p, a, span, li, th, td, input {
     flex-wrap: wrap;
 }
 .client-info .form-group {
+    position: relative;
     width: 100%;
     max-width: calc(50% - 15px);
     margin-bottom: 20px;
 }
 .client-info .form-group .input {
-    letter-spacing: 2px;
     background: transparent;
     border-bottom: 2px solid var(--black-color);
 }
@@ -132,6 +133,26 @@ p, a, span, li, th, td, input {
 }
 .client-info .form-group:nth-child(even) {
     margin-left: auto;
+}
+.client-info .form-group .placeholder {
+    position: absolute;
+    bottom: 7px;
+    left: 10px;
+}
+.client-info .form-group #client_name {
+    padding-left: 122px;
+}
+.client-info .form-group #event_date {
+    padding-left: 102px;
+}
+.client-info .form-group #venue {
+    padding-left: 69px;
+}
+.client-info .form-group #contact_number {
+    padding-left: 140px;
+}
+.client-info .form-group #socmed_account {
+    padding-left: 155px;
 }
 
 .table-info {
@@ -444,9 +465,6 @@ p, a, span, li, th, td, input {
     .client-info {
         margin-top: 0;
     }
-    .client-info .form-group {
-        max-width: 100%;
-    }
 
     .totals .wrapper .display-group .text {
         width: 65%;
@@ -488,6 +506,9 @@ p, a, span, li, th, td, input {
 @media screen and (max-width: 991px) {
     .logo-link .logo {
         max-height: 100px;
+    }
+    .client-info .form-group {
+        max-width: 100%;
     }
      
     .table-column-placeholder {

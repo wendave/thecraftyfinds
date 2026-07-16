@@ -73,6 +73,9 @@ $(function () {
         $(document).on('click', 'a.clear', function(e) {
             e.preventDefault();
 
+            // Clear input fields
+            $('.client-info .form-group input').val('');
+
             // Uncheck all selected items
             $('.item-checkbox').prop('checked', false);
 
