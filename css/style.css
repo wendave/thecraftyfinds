@@ -775,11 +775,13 @@ p, a, span, li, th, td, input {
         background-color: var(--secondary-color);
     }
     .table-info input[type=number] {
-        height: -webkit-fill-available;
+        /* height: -webkit-fill-available;
         height: -moz-available;
         height: stretch;
+        padding: 70px 10px; */
+        padding: 10px;
+        height: 285px;
         margin-top: -1px;
-        padding: 70px 10px;
         line-height: 28px;
     }
     .custom-table {
