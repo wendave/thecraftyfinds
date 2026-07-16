@@ -69,36 +69,24 @@ $(function () {
     inputDP();
 
 
-    function preventPageRefresh() {
-        function beforeUnloadHandler(e) {
+    function clearInputFields() {
+        $(document).on('click', 'a.clear', function(e) {
             e.preventDefault();
-            e.returnValue = "";
-        }
-    
-        window.addEventListener("beforeunload", beforeUnloadHandler);
-        return beforeUnloadHandler;
-    }
-    const beforeUnloadHandler = preventPageRefresh();
 
+            // Uncheck all selected items
+            $('.item-checkbox').prop('checked', false);
 
-    function clearInputs() {
-        $(".clear").on("click", function (e) {
-            e.preventDefault();
-    
-            // Scroll to the top
-            window.scrollTo({
-                top: 0,
-                behavior: "instant" // or omit "behavior"
-            });
-    
-            // Disable the beforeunload warning
-            window.removeEventListener("beforeunload", beforeUnloadHandler);
-    
-            // Reload the page
-            location.reload();
+            // Clear quantities
+            $('.group-qty').val('');
+
+            // Reset deposit
+            $('#total_deposit').val('0.00');
+
+            // Recalculate totals
+            computeEverything();
         });
     }
-    clearInputs();
+    clearInputFields();
 
 
     function setBackgroundColor() {

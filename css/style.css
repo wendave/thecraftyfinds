@@ -134,16 +134,6 @@ p, a, span, li, th, td, input {
     margin-left: auto;
 }
 
-.totals {
-    height: auto;
-}
-.totals .wrapper,
-.totals .display-group {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-}
-
 .table-info {
     padding-top: 30px;
 }
@@ -284,10 +274,23 @@ p, a, span, li, th, td, input {
     background: transparent;
     border: none;
 }
+.table-column .summary {
+    border-top: 3px solid var(--black-color);
+}
 
 .totals {
     padding-top: 50px;
     margin-bottom: 5px;
+}
+.totals .wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+.totals .wrapper-half {
+    width: 50%;
 }
 .totals .wrapper-left {
     width: calc(50% - 15px);
@@ -297,6 +300,9 @@ p, a, span, li, th, td, input {
     margin-left: auto;
 }
 .totals .display-group {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     margin-bottom: 1px;
 }
 .totals .display-group > * {
@@ -365,6 +371,7 @@ p, a, span, li, th, td, input {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
+    width: 50%;
 }
 .actions .wrapper .button-action {
     display: -webkit-box;
@@ -680,7 +687,7 @@ p, a, span, li, th, td, input {
 
     .totals {
         padding-top: 0;
-        margin-bottom: 15px;
+        /* margin-bottom: 15px; */
     }
     .totals .wrapper {
         -webkit-box-orient: vertical;
@@ -688,7 +695,7 @@ p, a, span, li, th, td, input {
         -ms-flex-direction: column;
         flex-direction: column;
     }
-    .totals .wrapper-left, .totals .wrapper-right {
+    .totals .wrapper-left, .totals .wrapper-right, .totals .wrapper-half, .actions .wrapper {
         width: 100%;
     }
     .totals .display-group .text, .totals .display-group .autocompute {
