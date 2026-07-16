@@ -545,7 +545,8 @@ p, a, span, li, th, td, input {
         -webkit-box-align: center;
         -ms-flex-align: center;
         align-items: center;
-        width: calc(50% - 1px);
+        /* width: calc(50% - 1px); */
+        width: calc(50% - 21px);
         height: 40px;
         margin-left: auto;
         padding: 0 10px;
