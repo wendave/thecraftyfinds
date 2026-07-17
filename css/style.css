@@ -639,7 +639,7 @@ p, a, span, li, th, td, input {
         margin-right: auto;
         width: 100%;
         max-width: 60px;
-        height: 25px;
+        height: 25px !important;
         padding: 0 10px;
     }
     .table-column-data .summary {

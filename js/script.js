@@ -104,4 +104,12 @@ $(function () {
         }
     }
     setBackgroundColor();
+
+
+    function quantityAutoHeight() {
+        var itemCount = $('.table-column-placeholder .item').length;
+        var heightAuto = ((itemCount * 40) - 35) + 'px';
+        $('.table-column-data .quantity .group-qty').css('height', heightAuto);
+    }
+    quantityAutoHeight();
 });
